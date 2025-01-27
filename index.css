@@ -10,3 +10,11 @@ input {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+button {
+    padding: 10px 20px;
+    font-weight: bold;
+    color: whitesmoke;
+    background: #5f9341;
+    border-style: none;
+}
