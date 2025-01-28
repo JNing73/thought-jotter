@@ -10,6 +10,7 @@ function saveLead() {
     myLeads.push(inputEl.value);
     console.log(myLeads);
     renderList();
+    inputEl.value = "";
 }
 
 function renderList() {
