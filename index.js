@@ -13,6 +13,10 @@ let myLeads = JSON.parse(localStorage.getItem("leads")) ?? [];
 initialRender();
 
 function saveLead() {
+    if (inputEl.value == "") 
+    {
+        return;
+    }
     myLeads.push(inputEl.value);
     console.log(myLeads);
 
