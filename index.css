@@ -21,6 +21,10 @@ button {
     border-style: none;
 }
 
+#input-btn:active {
+    background: #1789FC;
+}
+
 #delete-btn {
     color: #296EB4;
     background: whitesmoke;
