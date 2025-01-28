@@ -1,16 +1,16 @@
 const saveBtn = document.getElementById("input-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
+const delBtn = document.getElementById("delete-btn");
 
 saveBtn.addEventListener("click", saveLead);
+delBtn.addEventListener("click", confirmDelete)
 
 // Retrieve data from local storage or initialise a new array
 let myLeads = JSON.parse(localStorage.getItem("leads")) ?? [];
 
-// Render the list if able to retrieve data from local storage
-if (myLeads.length > 0) {
-    initialRender();
-}
+// Render the list if there is one, otherwise does nothing
+initialRender();
 
 function saveLead() {
     myLeads.push(inputEl.value);
@@ -30,9 +30,23 @@ function renderNewLead() {
 }
 
 function initialRender() {
+
+    ulEl.innerHTML = "";
+
     for (let i = 0; i < myLeads.length; i++) {
         let liEl = document.createElement("li");
         liEl.textContent = myLeads[i];
         ulEl.appendChild(liEl);
+    }
+}
+
+function confirmDelete() {
+    const selection = confirm("Are you sure you want to delete all the saved data?")
+
+    if (selection) {
+        localStorage.clear();
+        myLeads = [];
+        initialRender();
+        alert("All data deleted");
     }
 }
