@@ -19,3 +19,9 @@ button {
     background: #5f9341;
     border-style: none;
 }
+
+#delete-btn {
+    color: #5f9341;
+    background: whitesmoke;
+    border:  1px solid #5f9341;
+}
