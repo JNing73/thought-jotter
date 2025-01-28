@@ -9,7 +9,7 @@ input {
     width: 100%;
     box-sizing: border-box; /* ensures element accounts for padding in 100% width calculation */
     padding: 10px;
-    border: 1px solid #5f9341;
+    border: 1px solid #296EB4;
     margin-bottom: 4px;
 }
 
@@ -17,12 +17,12 @@ button {
     padding: 10px 20px;
     font-weight: bold;
     color: whitesmoke;
-    background: #5f9341;
+    background: #296EB4;
     border-style: none;
 }
 
 #delete-btn {
-    color: #5f9341;
+    color: #296EB4;
     background: whitesmoke;
-    border:  1px solid #5f9341;
+    border:  1px solid #296EB4;
 }
