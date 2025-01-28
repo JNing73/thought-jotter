@@ -10,3 +10,5 @@ This was built as part of my learning path through scrimba.com's training materi
 ## Coding Concepts Demonstrated
 - Document Object Model manipulations
 - Working with browser local storage
+
+Note: Icon image generated via Apple Image Playground
