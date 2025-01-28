@@ -2,20 +2,37 @@ const saveBtn = document.getElementById("input-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
 
-const myLeads = [];
-
 saveBtn.addEventListener("click", saveLead);
+
+// Retrieve data from local storage or initialise a new array
+let myLeads = JSON.parse(localStorage.getItem("leads")) ?? [];
+
+// Render the list if able to retrieve data from local storage
+if (myLeads.length > 0) {
+    initialRender();
+}
 
 function saveLead() {
     myLeads.push(inputEl.value);
     console.log(myLeads);
-    renderList();
-    inputEl.value = "";
+
+    renderNewLead();
+    inputEl.value = ""; // Clear user input
+
+    localStorage.setItem("leads", JSON.stringify(myLeads)); // Update local storage
 }
 
-function renderList() {
+function renderNewLead() {
     lastEntry = myLeads.length - 1;
     let liEl = document.createElement("li");
     liEl.textContent = myLeads[lastEntry]; //<li>value</li>
     ulEl.appendChild(liEl); 
+}
+
+function initialRender() {
+    for (let i = 0; i < myLeads.length; i++) {
+        let liEl = document.createElement("li");
+        liEl.textContent = myLeads[i];
+        ulEl.appendChild(liEl);
+    }
 }
