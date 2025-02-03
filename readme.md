@@ -10,6 +10,15 @@ of the lesson as a record of my learning. However as I progressed through the le
 I did deviate a bit and adjusted the JS or other implementation details to suit my 
 preferences. Hence my decision to rename the extension itself.
 
+## How to setup:
+- Clone the repo to your local machine
+- In your Chrome browser navigate to 'chrome://extensions'
+- Toggle 'Developer mode' to on
+- Click on 'Load unpacked'
+- Select the directory containing the repo on your local machine
+- You should now be able to open the extension through the extension widget 
+
+
 ## Functionality
 - Save content typed in the text input box to persistant storage
 - Retrieve data from local storage
